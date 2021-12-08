@@ -8,6 +8,7 @@ mod day2;
 mod day3;
 mod day4;
 mod day5;
+mod day6;
 
 fn add_solution<'x>(map: &mut HashMap<String, &'x AocSolution2>, solution: &'x AocSolution2) {
     let key = format!("{}-{}", solution.year, solution.day);
@@ -22,6 +23,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     add_solution(&mut solutions, &day3::SOLUTION);
     add_solution(&mut solutions, &day4::SOLUTION);
     add_solution(&mut solutions, &day5::SOLUTION);
+    add_solution(&mut solutions, &day6::SOLUTION);
 
     let input = aoc::get_input("2021", &day)?;
     if let Some(solution) = solutions.get(&key) {
